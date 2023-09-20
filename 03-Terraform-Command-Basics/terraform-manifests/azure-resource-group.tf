@@ -11,11 +11,12 @@ terraform {
 
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
+  skip_provider_registration = "true"
   features {}
 }
 
 # Create Resource Group 
 resource "azurerm_resource_group" "my_demo_rg1" {
-  location = "eastus"
+  location = "eastasia"
   name = "my-demo-rg1"  
 }
